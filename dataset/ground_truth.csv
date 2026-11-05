@@ -1,0 +1,21 @@
+folder,image_name,is_bill,merchant,date,total,currency,category
+bills/angled,bill1.jpg,Yes,D R Supermarket,2024-07-18,462,INR,Shopping
+bills/angled,bill2.jpg,Yes,Amrit Pharmacy,2021-08-23,25000,INR,Healthcare
+bills/blur,bill1.jpg,Yes,The Local Diners,2015-06-06,3280,INR,Food
+bills/blur,bill2.jpg,Yes,FrostSticks Forum Mall,2018-04-19,260,INR,Food
+bills/blur,bill3.jpg,Yes,APSPDCL,2026-10-04,0,INR,Utilities
+bills/blur,bill4.jpg,Yes,Reliance HyperMart Limited,2009-05-09,321.68,INR,Groceries
+bills/clear,bill1.jpg,Yes,,2026-02-22,4770,INR,Food
+bills/clear,bill2.jpg,Yes,RATNADEEP SUPER MARKET PVT LTD,2017-07-07,1104,INR,Groceries
+bills/clear,bill3.jpg,Yes,My Company,2025-08-05,231,INR,Healthcare
+bills/clear,bill4.jpg,Yes,BabyBox Retail,2024-03-20,398,INR,Shopping
+bills/clear,bill5.jpg,Yes,StyleHub Clothing,2025-10-01,95,USD,Shopping
+bills/crumpled,bill1.jpg,Yes,,2025-02-27,185,INR,Food
+bills/crumpled,bill2.jpg,Yes,Om Sweets Pvt. Ltd.,2017-05-26,268,INR,Food
+bills/crumpled,bill3.jpg,Yes,Brixx,2018-11-16,14.46,USD,Food
+bills/handwritten,bill1.jpg,Yes,Varnamm,2022-03-19,8520,INR,Shopping
+non_bills,document.jpg,No,,,,,,
+non_bills,id_card.jpg,No,,,,,,
+non_bills,screenshot.jpg,No,,,,,,
+non_bills,selfie.jpg,No,,,,,,
+non_bills,tea.jpg,No,,,,,,

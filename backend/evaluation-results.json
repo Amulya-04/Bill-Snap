@@ -1,0 +1,522 @@
+[
+  {
+    "image": "bills/angled/bill1.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "",
+      "merchant": "D R Supermarket",
+      "date": "2024-07-18",
+      "total": 462,
+      "currency": "INR",
+      "category": "Shopping",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.9
+      }
+    }
+  },
+  {
+    "image": "bills/angled/bill2.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": false,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid advance money receipt from a pharmacy.",
+      "merchant": "Amrit Pharmacy",
+      "date": "2021-08-23",
+      "total": 25000,
+      "currency": "INR",
+      "category": "Healthcare",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.95,
+        "total": 0.9,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/blur/bill1.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid restaurant receipt from THE LOCAL DINERS.",
+      "merchant": "THE LOCAL DINERS",
+      "date": "2015-06-06",
+      "total": 3280,
+      "currency": "INR",
+      "category": "Food",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/blur/bill2.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid purchase receipt from Froststicks Forum Mall.",
+      "merchant": "FROSTSTICKS FORUM MALL",
+      "date": "2018-04-19",
+      "total": 260,
+      "currency": "INR",
+      "category": "Food",
+      "confidence": {
+        "merchant": 0.95,
+        "date": 0.95,
+        "total": 0.95,
+        "category": 0.9
+      }
+    }
+  },
+  {
+    "image": "bills/blur/bill3.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": false,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "",
+      "merchant": "APSPDCL",
+      "date": "2026-04-10",
+      "total": 0,
+      "currency": "INR",
+      "category": "Utilities",
+      "confidence": {
+        "merchant": 0.95,
+        "date": 0.9,
+        "total": 0.85,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/blur/bill4.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid purchase receipt.",
+      "merchant": "RELIANCE HYPERMART LIMITED",
+      "date": "2009-05-09",
+      "total": 321.68,
+      "currency": "INR",
+      "category": "Groceries",
+      "confidence": {
+        "merchant": 0.95,
+        "date": 0.95,
+        "total": 0.98,
+        "category": 0.9
+      }
+    }
+  },
+  {
+    "image": "bills/clear/bill1.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": false,
+    "dateCorrect": false,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid restaurant receipt showing items ordered, quantities, taxes, and grand total.",
+      "merchant": "",
+      "date": "2022-02-26",
+      "total": "4770.00",
+      "currency": "INR",
+      "category": "Food",
+      "confidence": {
+        "merchant": 0.4,
+        "date": 0.9,
+        "total": 0.95,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/clear/bill2.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "",
+      "merchant": "RATNADEEP SUPER MARKET PVT LTD",
+      "date": "2017-07-07",
+      "total": 1104,
+      "currency": "INR",
+      "category": "Groceries",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/clear/bill3.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "",
+      "merchant": "My Company",
+      "date": "2025-08-05",
+      "total": 231,
+      "currency": "INR",
+      "category": "Healthcare",
+      "confidence": {
+        "merchant": 0.95,
+        "date": 0.95,
+        "total": 0.95,
+        "category": 0.9
+      }
+    }
+  },
+  {
+    "image": "bills/clear/bill4.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid tax invoice/bill from BabyBox Retail.",
+      "merchant": "BabyBox Retail",
+      "date": "2024-03-20",
+      "total": 398,
+      "currency": "INR",
+      "category": "Shopping",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/clear/bill5.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": false,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "",
+      "merchant": "StyleHub Clothing",
+      "date": "2025-01-10",
+      "total": 95,
+      "currency": "USD",
+      "category": "Shopping",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.99
+      }
+    }
+  },
+  {
+    "image": "bills/crumpled/bill1.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid restaurant receipt showing items purchased, date, taxes, and total amount.",
+      "merchant": "",
+      "date": "2025-02-27",
+      "total": 185,
+      "currency": "INR",
+      "category": "Food",
+      "confidence": {
+        "merchant": 0,
+        "date": 0.95,
+        "total": 0.99,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/crumpled/bill2.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": false,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a valid restaurant receipt from OM SWEETS PVT. LTD.",
+      "merchant": "OM SWEETS PVT. LTD.",
+      "date": "2017-05-26",
+      "total": 268,
+      "currency": "INR",
+      "category": "Food",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.95
+      }
+    }
+  },
+  {
+    "image": "bills/crumpled/bill3.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "The image is a genuine restaurant receipt.",
+      "merchant": "Brixx",
+      "date": "2018-11-16",
+      "total": 14.46,
+      "currency": "USD",
+      "category": "Food",
+      "confidence": {
+        "merchant": 0.99,
+        "date": 0.99,
+        "total": 0.99,
+        "category": 0.99
+      }
+    }
+  },
+  {
+    "image": "bills/handwritten/bill1.jpg",
+    "expectedBill": true,
+    "predictedBill": true,
+    "billCorrect": true,
+    "merchantCorrect": true,
+    "dateCorrect": true,
+    "totalCorrect": true,
+    "currencyCorrect": true,
+    "categoryCorrect": true,
+    "prediction": {
+      "isBill": true,
+      "reason": "",
+      "merchant": "Varnamm",
+      "date": "2022-03-19",
+      "total": 8520,
+      "currency": "INR",
+      "category": "Shopping",
+      "confidence": {
+        "merchant": 0.95,
+        "date": 0.95,
+        "total": 0.95,
+        "category": 0.9
+      }
+    }
+  },
+  {
+    "image": "non_bills/document.jpg",
+    "expectedBill": false,
+    "predictedBill": false,
+    "billCorrect": true,
+    "merchantCorrect": null,
+    "dateCorrect": null,
+    "totalCorrect": null,
+    "currencyCorrect": null,
+    "categoryCorrect": null,
+    "prediction": {
+      "isBill": false,
+      "reason": "The image is a legal document (Property Management Agreement), not a purchase bill or receipt.",
+      "merchant": "",
+      "date": "",
+      "total": null,
+      "currency": "",
+      "category": "",
+      "confidence": {
+        "merchant": 0,
+        "date": 0,
+        "total": 0,
+        "category": 0
+      }
+    }
+  },
+  {
+    "image": "non_bills/id_card.jpg",
+    "expectedBill": false,
+    "predictedBill": false,
+    "billCorrect": true,
+    "merchantCorrect": null,
+    "dateCorrect": null,
+    "totalCorrect": null,
+    "currencyCorrect": null,
+    "categoryCorrect": null,
+    "prediction": {
+      "isBill": false,
+      "reason": "The provided image is an employee identity card, not a purchase bill or receipt.",
+      "merchant": "",
+      "date": "",
+      "total": null,
+      "currency": "",
+      "category": "",
+      "confidence": {
+        "merchant": 0,
+        "date": 0,
+        "total": 0,
+        "category": 0
+      }
+    }
+  },
+  {
+    "image": "non_bills/screenshot.jpg",
+    "expectedBill": false,
+    "predictedBill": false,
+    "billCorrect": true,
+    "merchantCorrect": null,
+    "dateCorrect": null,
+    "totalCorrect": null,
+    "currencyCorrect": null,
+    "categoryCorrect": null,
+    "prediction": {
+      "isBill": false,
+      "reason": "The image is a smartphone home screen screenshot, not a purchase bill or receipt.",
+      "merchant": "",
+      "date": "",
+      "total": null,
+      "currency": "",
+      "category": "",
+      "confidence": {
+        "merchant": 0,
+        "date": 0,
+        "total": 0,
+        "category": 0
+      }
+    }
+  },
+  {
+    "image": "non_bills/selfie.jpg",
+    "expectedBill": false,
+    "predictedBill": false,
+    "billCorrect": true,
+    "merchantCorrect": null,
+    "dateCorrect": null,
+    "totalCorrect": null,
+    "currencyCorrect": null,
+    "categoryCorrect": null,
+    "prediction": {
+      "isBill": false,
+      "reason": "The image is a selfie of a person, not a purchase bill or receipt.",
+      "merchant": "",
+      "date": "",
+      "total": null,
+      "currency": "",
+      "category": "",
+      "confidence": {
+        "merchant": 0,
+        "date": 0,
+        "total": 0,
+        "category": 0
+      }
+    }
+  },
+  {
+    "image": "non_bills/tea.jpg",
+    "expectedBill": false,
+    "predictedBill": false,
+    "billCorrect": true,
+    "merchantCorrect": null,
+    "dateCorrect": null,
+    "totalCorrect": null,
+    "currencyCorrect": null,
+    "categoryCorrect": null,
+    "prediction": {
+      "isBill": false,
+      "reason": "The image shows food and a cup of tea, which is a random object/food photo, not a bill or receipt.",
+      "merchant": "",
+      "date": "",
+      "total": null,
+      "currency": "",
+      "category": "",
+      "confidence": {
+        "merchant": 0,
+        "date": 0,
+        "total": 0,
+        "category": 0
+      }
+    }
+  }
+]
