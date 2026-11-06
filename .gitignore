@@ -1,0 +1,5 @@
+node_modules/
+.env
+backend/.env
+billsnap-app/node_modules/
+billsnap-app/dist/
