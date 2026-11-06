@@ -163,7 +163,36 @@ function App() {
   }
 
   const formatAmount = (bill) => `${bill.currency || 'INR'} ${Number(bill.total || 0).toFixed(2)}`
-  const totalSaved = savedBills.reduce((sum, bill) => sum + Number(bill.total || 0), 0)
+
+  // Keep totals separate by currency; never add INR, USD, EUR, etc. together.
+  const totalsByCurrency = savedBills.reduce((totals, bill) => {
+    const currency = bill.currency || 'INR'
+    totals[currency] = (totals[currency] || 0) + Number(bill.total || 0)
+    return totals
+  }, {})
+  const totalSavedLabel = Object.entries(totalsByCurrency)
+    .map(([currency, amount]) => `${currency} ${amount.toLocaleString('en-IN', { maximumFractionDigits: 2 })}`)
+    .join(' · ') || '0'
+
+  // Category spending is grouped by currency so unlike currencies are never combined.
+  const categorySpending = savedBills.reduce((groups, bill) => {
+    const currency = bill.currency || 'INR'
+    const category = bill.category || 'Other'
+    if (!groups[currency]) groups[currency] = {}
+    groups[currency][category] = (groups[currency][category] || 0) + Number(bill.total || 0)
+    return groups
+  }, {})
+
+  const categoryColors = ['#b85d3e', '#71816a', '#c49a58', '#8b7965', '#6f897e', '#b77b62', '#8b8a70']
+  const categoryCurrencyGroups = Object.entries(categorySpending).map(([currency, categories]) => {
+    const entries = Object.entries(categories).sort((a, b) => b[1] - a[1])
+    return {
+      currency,
+      entries,
+      max: Math.max(...entries.map(([, amount]) => amount), 0),
+      top: entries[0]
+    }
+  })
 
   return (
     <div className="app-shell">
@@ -206,13 +235,73 @@ function App() {
           </article>
           <article className="stat-card">
             <span className="stat-icon green"><Wallet size={19} /></span>
-            <div><small>Total saved amount*</small><strong>{totalSaved.toLocaleString('en-IN', { maximumFractionDigits: 2 })}</strong><span className="stat-caption">Across saved bills, mixed currencies</span></div>
+            <div><small>Saved value by currency</small><strong className="stat-currency-total">{totalSavedLabel}</strong><span className="stat-caption">Separate totals · no currency conversion</span></div>
           </article>
           <article className="stat-card">
             <span className="stat-icon violet"><CalendarDays size={19} /></span>
             <div><small>Latest activity</small><strong>{savedBills.length ? new Date(savedBills[0].savedAt || savedBills[0].id).toLocaleDateString() : '—'}</strong><span className="stat-caption">Most recently saved bill</span></div>
           </article>
         </section>
+
+        {savedBills.length > 0 && (
+          <section className="category-section" aria-label="Category-wise expenditure">
+            <div className="category-heading">
+              <div>
+                <span className="step-label">SPENDING BREAKDOWN</span>
+                <h2>Where does your money go?</h2>
+                <p>See how your saved bills are distributed across categories.</p>
+              </div>
+              <span className="category-heading-mark"><Wallet size={20} /></span>
+            </div>
+
+            <div className="category-currency-grid">
+              {categoryCurrencyGroups.map(group => (
+                <article className="category-card" key={group.currency}>
+                  <div className="category-card-heading">
+                    <div>
+                      <small>EXPENDITURE IN</small>
+                      <h3>{group.currency}</h3>
+                    </div>
+                    {group.top && (
+                      <span className="top-category-label">
+                        <ArrowUpRight size={13} /> Highest: {group.top[0]}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="category-bars">
+                    {group.entries.map(([category, amount], index) => (
+                      <div className="category-row" key={category}>
+                        <div className="category-row-label">
+                          <span>{category}</span>
+                          <strong>
+                            {group.currency} {amount.toLocaleString('en-IN', { maximumFractionDigits: 2 })}
+                          </strong>
+                        </div>
+                        <div
+                          className="category-track"
+                          role="progressbar"
+                          aria-label={`${category} expenditure`}
+                          aria-valuemin="0"
+                          aria-valuemax={group.max || 0}
+                          aria-valuenow={amount}
+                        >
+                          <span
+                            className="category-fill"
+                            style={{
+                              width: `${group.max > 0 ? (amount / group.max) * 100 : 0}%`,
+                              background: categoryColors[index % categoryColors.length]
+                            }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         <div className="content-grid">
           <div className="primary-column">

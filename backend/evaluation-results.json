@@ -8,7 +8,7 @@
     "dateCorrect": true,
     "totalCorrect": true,
     "currencyCorrect": true,
-    "categoryCorrect": true,
+    "categoryCorrect": false,
     "prediction": {
       "isBill": true,
       "reason": "",
@@ -16,12 +16,12 @@
       "date": "2024-07-18",
       "total": 462,
       "currency": "INR",
-      "category": "Shopping",
+      "category": "Groceries",
       "confidence": {
         "merchant": 0.99,
         "date": 0.99,
         "total": 0.99,
-        "category": 0.9
+        "category": 0.85
       }
     }
   },
@@ -34,10 +34,10 @@
     "dateCorrect": true,
     "totalCorrect": true,
     "currencyCorrect": true,
-    "categoryCorrect": false,
+    "categoryCorrect": true,
     "prediction": {
       "isBill": true,
-      "reason": "The image is a valid advance money receipt from a pharmacy.",
+      "reason": "The image is a valid pharmacy advance money receipt.",
       "merchant": "Amrit Pharmacy",
       "date": "2021-08-23",
       "total": 25000,
@@ -63,17 +63,17 @@
     "categoryCorrect": true,
     "prediction": {
       "isBill": true,
-      "reason": "The image is a valid restaurant receipt from THE LOCAL DINERS.",
+      "reason": "",
       "merchant": "THE LOCAL DINERS",
       "date": "2015-06-06",
       "total": 3280,
       "currency": "INR",
       "category": "Food",
       "confidence": {
-        "merchant": 0.99,
-        "date": 0.99,
-        "total": 0.99,
-        "category": 0.95
+        "merchant": 0.95,
+        "date": 0.95,
+        "total": 0.95,
+        "category": 0.9
       }
     }
   },
@@ -109,15 +109,15 @@
     "predictedBill": true,
     "billCorrect": true,
     "merchantCorrect": true,
-    "dateCorrect": false,
+    "dateCorrect": true,
     "totalCorrect": true,
     "currencyCorrect": true,
     "categoryCorrect": true,
     "prediction": {
       "isBill": true,
-      "reason": "",
+      "reason": "This is a genuine electricity utility bill from APSPDCL.",
       "merchant": "APSPDCL",
-      "date": "2026-04-10",
+      "date": "2026-10-04",
       "total": 0,
       "currency": "INR",
       "category": "Utilities",
@@ -142,7 +142,7 @@
     "prediction": {
       "isBill": true,
       "reason": "The image is a valid purchase receipt.",
-      "merchant": "RELIANCE HYPERMART LIMITED",
+      "merchant": "Reliance Hypermart Limited",
       "date": "2009-05-09",
       "total": 321.68,
       "currency": "INR",
@@ -151,7 +151,7 @@
         "merchant": 0.95,
         "date": 0.95,
         "total": 0.98,
-        "category": 0.9
+        "category": 0.8
       }
     }
   },
@@ -161,20 +161,20 @@
     "predictedBill": true,
     "billCorrect": true,
     "merchantCorrect": false,
-    "dateCorrect": false,
+    "dateCorrect": true,
     "totalCorrect": true,
     "currencyCorrect": true,
     "categoryCorrect": true,
     "prediction": {
       "isBill": true,
-      "reason": "The image is a valid restaurant receipt showing items ordered, quantities, taxes, and grand total.",
-      "merchant": "",
-      "date": "2022-02-26",
+      "reason": "The image is a valid restaurant receipt showing food items, quantities, taxes, and a grand total.",
+      "merchant": "Bennie",
+      "date": "2026-02-22",
       "total": "4770.00",
       "currency": "INR",
       "category": "Food",
       "confidence": {
-        "merchant": 0.4,
+        "merchant": 0.85,
         "date": 0.9,
         "total": 0.95,
         "category": 0.95
@@ -203,7 +203,7 @@
         "merchant": 0.99,
         "date": 0.99,
         "total": 0.99,
-        "category": 0.95
+        "category": 0.99
       }
     }
   },
@@ -245,7 +245,7 @@
     "categoryCorrect": true,
     "prediction": {
       "isBill": true,
-      "reason": "The image is a valid tax invoice/bill from BabyBox Retail.",
+      "reason": "The image is a valid tax invoice from BabyBox Retail.",
       "merchant": "BabyBox Retail",
       "date": "2024-03-20",
       "total": 398,
@@ -297,7 +297,7 @@
     "categoryCorrect": true,
     "prediction": {
       "isBill": true,
-      "reason": "The image is a valid restaurant receipt showing items purchased, date, taxes, and total amount.",
+      "reason": "",
       "merchant": "",
       "date": "2025-02-27",
       "total": 185,
@@ -305,9 +305,9 @@
       "category": "Food",
       "confidence": {
         "merchant": 0,
-        "date": 0.95,
-        "total": 0.99,
-        "category": 0.95
+        "date": 0.9,
+        "total": 0.95,
+        "category": 0.8
       }
     }
   },
@@ -316,7 +316,7 @@
     "expectedBill": true,
     "predictedBill": true,
     "billCorrect": true,
-    "merchantCorrect": false,
+    "merchantCorrect": true,
     "dateCorrect": true,
     "totalCorrect": true,
     "currencyCorrect": true,
@@ -401,7 +401,7 @@
     "categoryCorrect": null,
     "prediction": {
       "isBill": false,
-      "reason": "The image is a legal document (Property Management Agreement), not a purchase bill or receipt.",
+      "reason": "The image is a Property Management Agreement document, not a purchase bill or receipt.",
       "merchant": "",
       "date": "",
       "total": null,
@@ -479,7 +479,7 @@
     "categoryCorrect": null,
     "prediction": {
       "isBill": false,
-      "reason": "The image is a selfie of a person, not a purchase bill or receipt.",
+      "reason": "The image is a selfie of a person and does not contain a purchase bill or receipt.",
       "merchant": "",
       "date": "",
       "total": null,
@@ -505,7 +505,7 @@
     "categoryCorrect": null,
     "prediction": {
       "isBill": false,
-      "reason": "The image shows food and a cup of tea, which is a random object/food photo, not a bill or receipt.",
+      "reason": "The image shows food and a cup of tea, not a bill or receipt.",
       "merchant": "",
       "date": "",
       "total": null,
